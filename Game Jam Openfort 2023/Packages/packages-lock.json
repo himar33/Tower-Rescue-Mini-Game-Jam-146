@@ -1,5 +1,19 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.3.3",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b992a061fbf68ff1eb475d0837065b0549ed31ba"
+    },
+    "com.openfort.sdk": {
+      "version": "https://github.com/openfort-xyz/openfort-csharp-unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "cc2304b4fd5b62637e14e879fcb36ffad8c45500"
+    },
     "com.unity.collab-proxy": {
       "version": "2.0.4",
       "depth": 0,
@@ -59,6 +73,13 @@
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "https://github.com/needle-mirror/com.unity.nuget.newtonsoft-json.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8a38a7f3c863c04fb7ca072cb20a6e965802445a"
     },
     "com.unity.performance.profile-analyzer": {
       "version": "1.2.2",

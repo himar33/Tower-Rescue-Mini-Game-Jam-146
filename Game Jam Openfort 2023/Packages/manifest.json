@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.3.3",
+    "com.openfort.sdk": "https://github.com/openfort-xyz/openfort-csharp-unity.git",
     "com.unity.collab-proxy": "2.0.4",
     "com.unity.feature.development": "1.0.1",
+    "com.unity.nuget.newtonsoft-json": "https://github.com/needle-mirror/com.unity.nuget.newtonsoft-json.git",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.4",
     "com.unity.ugui": "1.0.0",
