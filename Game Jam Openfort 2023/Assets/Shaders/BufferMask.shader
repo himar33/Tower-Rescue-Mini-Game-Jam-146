@@ -3,6 +3,7 @@ Shader "Unlit/BufferMask"
     Properties
     {
         _MainTex("Stencil", 2D) = "white" {}
+        _Alpha("Alpha", float) = 1
     }
     SubShader
     {
@@ -33,6 +34,7 @@ Shader "Unlit/BufferMask"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float _Alpha;
 
             Interpolators vert (MeshData v)
             {
@@ -45,7 +47,8 @@ Shader "Unlit/BufferMask"
             float4 frag (Interpolators i) : SV_Target
             {
                 float4 MaskColor = tex2D(_MainTex, i.uv);
-                return MaskColor;
+
+                return MaskColor * _Alpha;
             }
             ENDCG
         }

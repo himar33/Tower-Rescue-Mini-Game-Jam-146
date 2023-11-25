@@ -13,4 +13,6 @@ public class CSpellScriptableObject : ScriptableObject
     public Vector2 mLightPosition01;
 
     public float mActiveTimeSeconds;
+
+    public float mFadeSeconds = 0.5f;
 }

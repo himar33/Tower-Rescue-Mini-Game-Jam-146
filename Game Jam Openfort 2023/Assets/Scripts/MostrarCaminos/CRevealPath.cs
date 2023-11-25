@@ -98,15 +98,18 @@ public class CRevealPath : MonoBehaviour
 
         if(Input.GetKeyUp(mClickKeycode) && mIsValidDrag)
         {
+            if(mIsValidDrag)
+            {
+                Mesh NewMesh = new Mesh();
+                NewMesh.name = "RevealQuad";
+
+                SetBoundMesh(ref NewMesh, mInitWorldPos, mCurrentWorldPos);
+                
+                var NewMaskObject = CreateMaskGameobject(NewMesh);
+                NewMaskObject.GetComponent<CSpellRevealMask>().Config(mSpellInfo);
+            }
+
             mPreviewObject.SetActive(false);
-
-            Mesh NewMesh = new Mesh();
-            NewMesh.name = "RevealQuad";
-
-            SetBoundMesh(ref NewMesh, mInitWorldPos, mCurrentWorldPos);
-            
-            var NewMaskObject = CreateMaskGameobject(NewMesh);
-            NewMaskObject.GetComponent<CSpellRevealMask>().Config(mSpellInfo);
 
             mInitWorldPos = Vector2.zero;
         } 
