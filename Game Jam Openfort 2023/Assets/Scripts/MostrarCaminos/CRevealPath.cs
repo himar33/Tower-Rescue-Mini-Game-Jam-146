@@ -69,14 +69,16 @@ public class CRevealPath : MonoBehaviour
             if(Physics.Raycast(ClickRay, out RaycastHit HitInfo, Mathf.Infinity, mRevealObjectMask))
             {
                 mInitWorldPos = HitInfo.point;
+                mIsValidDrag = true;
             }
             else
             {
                 Debug.LogError("There should be an object to mask a reveal path");
+                mIsValidDrag = false;
             }
         }
 
-        if(Input.GetKey(mClickKeycode))
+        if(mIsValidDrag && Input.GetKey(mClickKeycode))
         {
             Ray DragRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             
@@ -89,14 +91,9 @@ public class CRevealPath : MonoBehaviour
                 mCurrentWorldPos = HitInfo.point;
                 mIsValidDrag = true;
             }
-            else
-            {
-                Debug.LogError("There should be an object to mask a reveal path");
-                mIsValidDrag = false;
-            }
         }
 
-        if(Input.GetKeyUp(mClickKeycode) && mIsValidDrag)
+        if(Input.GetKeyUp(mClickKeycode))
         {
             if(mIsValidDrag)
             {
@@ -112,7 +109,7 @@ public class CRevealPath : MonoBehaviour
             mPreviewObject.SetActive(false);
 
             mInitWorldPos = Vector2.zero;
-        } 
+        }
     }
 
     void ClampPositionToTopLeftCorner()
