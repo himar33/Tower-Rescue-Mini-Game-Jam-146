@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class CSonarPing : MonoBehaviour
 {
-    const float AppearTime = 0.5f;
+    const float mAppearTime = 0.15f;
     float mCurrentTime;
+
+    public void Start() 
+    {
+        transform.localScale = Vector3.zero;
+    }
     
     public void Show()
     {
-
+        mCurrentTime = 0;
     }
 
     public void Update()
     {
-        // transform.scale = Vector3.one
+        if(mCurrentTime <= mAppearTime)
+        {
+            mCurrentTime += Time.deltaTime;
+
+            float Scale01 = Mathf.Clamp01(mCurrentTime / mAppearTime);
+            transform.localScale = Vector3.one * Scale01;
+        }
     }
 }
