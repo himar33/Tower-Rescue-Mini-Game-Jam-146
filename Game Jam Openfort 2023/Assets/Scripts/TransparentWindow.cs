@@ -25,8 +25,6 @@ public class TransparentWindow : MonoBehaviour
 
     private void Start()
     {
-        MessageBox(new IntPtr(0), "Hello World!", "Hello Dialog", 0);
-
         IntPtr hWnd = GetActiveWindow();
 
         MARGINS margins = new MARGINS { cxLeftWidth = -1 };
