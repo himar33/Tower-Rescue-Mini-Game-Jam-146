@@ -9,6 +9,9 @@ public class CRevealPath : MonoBehaviour
 {
     [SerializeField]
     Material mMaskMaterial;
+    
+    [SerializeField]
+    CSpellScriptableObject mSpellInfo;
 
     [SerializeField]
     LayerMask mRevealObjectMask;
@@ -60,14 +63,16 @@ public class CRevealPath : MonoBehaviour
             else
             {
                 Debug.LogError("There should be an object to mask a reveal path");
+                mCurrentWorldPos = mInitWorldPos;
             }
         }
 
-        if(Input.GetKeyUp(mClickKeycode))
+        if(Input.GetKeyUp(mClickKeycode) && mCurrentWorldPos != mInitWorldPos)
         {
             Mesh MaskMesh = CreateBoundMesh(mInitWorldPos, mCurrentWorldPos);
             
-            CreateMaskGameobject(MaskMesh);
+            var NewMaskObject = CreateMaskGameobject(MaskMesh);
+            NewMaskObject.GetComponent<CSpellRevealMask>().Config(mSpellInfo);
 
             mInitWorldPos = Vector2.zero;
         } 
@@ -138,7 +143,7 @@ public class CRevealPath : MonoBehaviour
         return NewMesh;
     }
 
-    void CreateMaskGameobject(Mesh aMaskMesh)
+    GameObject CreateMaskGameobject(Mesh aMaskMesh)
     {
         var NewMaskObject = new GameObject("RevealMask");
 
@@ -149,5 +154,9 @@ public class CRevealPath : MonoBehaviour
 
         var RendererComponent = NewMaskObject.AddComponent<MeshRenderer>();
         RendererComponent.material = mMaskMaterial;
+
+        var SpellMaskComponent = NewMaskObject.AddComponent<CSpellRevealMask>();
+
+        return NewMaskObject;
     }
 }
