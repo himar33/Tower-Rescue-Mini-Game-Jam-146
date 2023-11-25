@@ -1,18 +1,17 @@
 {
   "dependencies": {
-    "com.cysharp.unitask": {
-      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.3.3",
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "b992a061fbf68ff1eb475d0837065b0549ed31ba"
+      "source": "builtin",
+      "dependencies": {}
     },
-    "com.openfort.sdk": {
-      "version": "https://github.com/openfort-xyz/openfort-csharp-unity.git",
+    "com.unity.collab-proxy": {
+      "version": "2.0.4",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "cc2304b4fd5b62637e14e879fcb36ffad8c45500"
+      "url": "https://packages.unity.com"
     },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
@@ -67,13 +66,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "https://github.com/needle-mirror/com.unity.nuget.newtonsoft-json.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "8a38a7f3c863c04fb7ca072cb20a6e965802445a"
-    },
     "com.unity.performance.profile-analyzer": {
       "version": "1.2.2",
       "depth": 1,
@@ -118,6 +110,18 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.timeline": {
+      "version": "1.7.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.director": "1.0.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ugui": {
       "version": "1.0.0",
       "depth": 0,
@@ -126,6 +130,16 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.unity.visualscripting": {
+      "version": "1.8.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
