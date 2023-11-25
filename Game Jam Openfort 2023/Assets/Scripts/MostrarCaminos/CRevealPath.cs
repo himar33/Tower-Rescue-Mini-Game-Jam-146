@@ -61,8 +61,6 @@ public class CRevealPath : MonoBehaviour
             {
                 Debug.LogError("There should be an object to mask a reveal path");
             }
-            
-            // ClampPositionToTopLeftCorner();            
         }
 
         if(Input.GetKeyUp(mClickKeycode))
@@ -81,14 +79,35 @@ public class CRevealPath : MonoBehaviour
         mCurrentWorldPos.y = Math.Max(mCurrentWorldPos.y, mInitWorldPos.y);
     }
 
-    Mesh CreateBoundMesh(Vector3 aTopLeftWorldPos, Vector3 aBotRightWorldPos)
+    Mesh CreateBoundMesh(Vector3 aPointA, Vector3 aPointB)
     {
         Mesh NewMesh = new Mesh();
 
-        Vector3 TopLeft = aTopLeftWorldPos;
-        Vector3 BotRight = aBotRightWorldPos;
+        Vector3 TopLeft = aPointA;
+        Vector3 BotRight = aPointB;
         Vector3 TopRight = new Vector3(BotRight.x, TopLeft.y, TopLeft.z);
         Vector3 BotLeft = new Vector3(TopLeft.x, BotRight.y, BotRight.z);
+        
+        if(aPointA.y > aPointB.y)
+        {
+            if(aPointA.x > aPointB.x)
+            {
+                (BotLeft, BotRight) = (BotRight, BotLeft);
+                (TopLeft, TopRight) = (TopRight, TopLeft);
+            }
+        }
+        else
+        {
+            (TopRight, BotRight) = (BotRight, TopRight);
+            (TopLeft, BotLeft) = (BotLeft, TopLeft);
+
+            if(aPointA.x > aPointB.x)
+            {
+                (TopLeft, TopRight) = (TopRight, TopLeft);
+                (BotLeft, BotRight) = (BotRight, BotLeft);
+            }
+        }
+
 
         List<Vector3> Vertices = new List<Vector3>()
         {
