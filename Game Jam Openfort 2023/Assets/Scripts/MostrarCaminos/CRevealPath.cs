@@ -23,6 +23,9 @@ public class CRevealPath : MonoBehaviour
     
     [SerializeField]
     int mDrawMaskBufferLayer;
+
+    [SerializeField]
+    ObjectPooler mMaskObjectPooler;
     
     // Drag positions from camera to world
     Vector3 mInitWorldPos;
@@ -33,7 +36,7 @@ public class CRevealPath : MonoBehaviour
 
     bool mIsValidDrag;
 
-    readonly KeyCode mClickKeycode;
+    const KeyCode mClickKeycode = KeyCode.Mouse0;
 
     MaterialPropertyBlock mPreviewMaterialPropertyBlock;
     
@@ -48,11 +51,11 @@ public class CRevealPath : MonoBehaviour
         }
     }
 
-
-    public CRevealPath()
+    public void Start()
     {
         mInitWorldPos = Vector2.zero;
-        mClickKeycode = KeyCode.Mouse0;
+
+        mMaskObjectPooler.AddConstructor(CreateMaskGameobject);
     }
     
     private void Update() 
@@ -102,8 +105,10 @@ public class CRevealPath : MonoBehaviour
 
                 SetBoundMesh(ref NewMesh, mInitWorldPos, mCurrentWorldPos);
                 
-                var NewMaskObject = CreateMaskGameobject(NewMesh);
+                var NewMaskObject = mMaskObjectPooler.GetPooledObject();
+                NewMaskObject.GetComponent<MeshFilter>().mesh = NewMesh;
                 NewMaskObject.GetComponent<CSpellRevealMask>().Config(mSpellInfo);
+                NewMaskObject.SetActive(true);
             }
 
             mPreviewObject.SetActive(false);
@@ -203,7 +208,7 @@ public class CRevealPath : MonoBehaviour
         }
     }
 
-    GameObject CreateMaskGameobject(Mesh aMaskMesh)
+    GameObject CreateMaskGameobject()
     {
         var NewMaskObject = new GameObject("RevealMask");
         NewMaskObject.transform.SetParent(this.transform);
@@ -211,7 +216,6 @@ public class CRevealPath : MonoBehaviour
         NewMaskObject.layer = mDrawMaskBufferLayer;
 
         var MeshFilterComponent = NewMaskObject.AddComponent<MeshFilter>();
-        MeshFilterComponent.mesh = aMaskMesh;
 
         var RendererComponent = NewMaskObject.AddComponent<MeshRenderer>();
         RendererComponent.material = mMaskMaterial;
