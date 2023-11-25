@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: spell_quad
   m_EditorClassIdentifier: 
   mDescription: 
-  mStencilTexture: {fileID: 0}
+  mStencilTexture: {fileID: 2800000, guid: f9ea816da42455843a487dc31bf6dca7, type: 3}
   mLightPosition01: {x: 0, y: 0}
-  mActiveTimeSeconds: 0
+  mActiveTimeSeconds: 5
