@@ -73,6 +73,8 @@ public class EnemyController : MonoBehaviour
         // Calcula la dirección hacia el jugador sin cambiar la rotación del enemigo.
         Vector3 dir = (mPlayerTransform.transform.position - transform.position).normalized;
 
+        //TODO hacer que primero cargue la embestida
+
         // Mueve el enemigo en la dirección calculada.
         transform.Translate((mFloorTransform.right * dir.x + (mFloorTransform.forward * dir.z)) * (vel * 2) * Time.deltaTime, Space.World);
 
