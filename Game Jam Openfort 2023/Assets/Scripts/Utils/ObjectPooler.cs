@@ -13,14 +13,9 @@ public class ObjectPooler : MonoBehaviour
     [SerializeField]
     Transform mParentTransform;
 
-    List<GameObject> mInstances;
+    List<GameObject> mInstances = new List<GameObject>();
 
     CreateNewInstanceDelegate CreateNewInstanceFunction;
-
-    private void Start()
-    {
-        mInstances = new List<GameObject>();
-    }
     
     public GameObject GetPooledObject()
     {

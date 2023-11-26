@@ -88,4 +88,10 @@ public class EnemyController : MonoBehaviour
         transform.Translate((mFloorTransform.right * dir.x + mFloorTransform.forward * dir.z) * vel * Time.deltaTime, Space.World);
      
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.localPosition, radioMelee);
+    }
 }
