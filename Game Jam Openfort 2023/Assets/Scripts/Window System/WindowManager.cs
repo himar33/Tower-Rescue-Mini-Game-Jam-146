@@ -103,16 +103,11 @@ public class WindowManager : Jam.Singleton<WindowManager>
 
         GameObject SpellImageObject = new GameObject("Spell Info Image");
         SpellImageObject.transform.SetParent(winGO.transform);
+        SpellImageObject.transform.localScale = Vector3.one * 3;
         var InfoImageComponent = SpellImageObject.AddComponent<Image>();
 
-        GameObject SpellTextObject = new GameObject("Spell Info Text");
-        SpellTextObject.transform.SetParent(winGO.transform);
-        var TextComponent = SpellTextObject.AddComponent<Text>();
-        TextComponent.color = Color.black;
-        TextComponent.font = mFont;
-
         var SpellInfoComponent = winGO.AddComponent<CWindowSpellData>();
-        SpellInfoComponent.SetUIElements(InfoImageComponent, TextComponent);
+        SpellInfoComponent.SetUIElement(InfoImageComponent);
 
         return winGO;
     }

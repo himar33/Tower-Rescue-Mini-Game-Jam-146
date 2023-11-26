@@ -13,11 +13,14 @@ public class COrganicLight : MonoBehaviour
     static readonly float mValueSpeed = 2.0f;
     
     Light mLightComponent;
-    Color mInitialColor;
+    Color mInitialColor = Color.white;
 
     public void Start() 
     {
         mLightComponent = GetComponent<Light>();
+        
+        if(mInitialColor == Color.white)
+            mInitialColor = mLightComponent.color;
     }
 
     public void SetColor(Color aNewColor)

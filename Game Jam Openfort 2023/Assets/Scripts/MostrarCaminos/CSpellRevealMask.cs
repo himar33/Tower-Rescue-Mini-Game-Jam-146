@@ -51,6 +51,7 @@ public class CSpellRevealMask : MonoBehaviour
             mPointLightObject.transform.SetParent(this.transform);
             
             mPointLight = mPointLightObject.AddComponent<Light>();
+            mPointLight.shadows = LightShadows.Hard;
             mPointLightObject.AddComponent<COrganicLight>();
             
             mPointLight.type = LightType.Point;

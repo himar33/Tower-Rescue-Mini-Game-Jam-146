@@ -10,6 +10,8 @@ public class CSpellScriptableObject : ScriptableObject
     
     public Texture mStencilTexture;
     
+    public Sprite mHUDSprite;
+    
     public float mActiveTimeSeconds;
 
     public float mFadeSeconds = 0.5f;

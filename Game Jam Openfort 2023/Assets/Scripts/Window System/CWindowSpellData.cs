@@ -10,14 +10,12 @@ public class CWindowSpellData : MonoBehaviour
     CSpellScriptableObject mSpellData;
 
     Image mHUDSpellInfoObject;
-    Text mTextObject;
 
     public void SetSpell(CSpellScriptableObject aSpellData)
     {
         mSpellData = aSpellData;
 
-        mTextObject.text = aSpellData.mDescription;
-        // mHUDSpellInfoObject.sprite = aSpellData.mStencilTexture;
+        mHUDSpellInfoObject.sprite = aSpellData.mHUDSprite;
     }
     
     public CSpellScriptableObject GetSpell()
@@ -25,9 +23,8 @@ public class CWindowSpellData : MonoBehaviour
         return mSpellData;
     }
 
-    public void SetUIElements(Image aHUDSpellInfoObject, Text aTextObject)
+    public void SetUIElement(Image aHUDSpellInfoObject)
     {
         mHUDSpellInfoObject = aHUDSpellInfoObject;
-        mTextObject = aTextObject;
     }
 }
