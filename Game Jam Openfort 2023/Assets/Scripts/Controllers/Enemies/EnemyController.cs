@@ -7,7 +7,12 @@ public class EnemyController : MonoBehaviour
 {
     public Jam.StateBehaviour StateMachine => mStateMachine;
     public Animator Anim => mAnim;
-    public Transform Target => mTarget;
+    public Transform Target
+    {
+        get => mTarget;
+        set => mTarget = value;
+    }
+    public PlayerController Player => mPlayerController;
     public float DetectionRadius => mDetectionRadius;
     public float ChaseSpeed => mChaseSpeed;
     public float DistanceToAttack => mDistanceToAttack;
@@ -20,10 +25,12 @@ public class EnemyController : MonoBehaviour
 
     private Jam.StateBehaviour mStateMachine;
     private Animator mAnim;
+    private PlayerController mPlayerController;
 
     private void Awake()
     {
         mAnim = GetComponent<Animator>();
+        mPlayerController = FindObjectOfType<PlayerController>();
     }
 
     private void Start()

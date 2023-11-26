@@ -44,9 +44,10 @@ public class DiscipleSpawnManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerController>().AmountDisciples = mDiscipleControllers.Count;
+            PlayerController player = other.GetComponent<PlayerController>();
             foreach (var disciple in mDiscipleControllers)
             {
+                player.Disciples.Add(disciple);
                 disciple.IsRescued = true;
             }
         }

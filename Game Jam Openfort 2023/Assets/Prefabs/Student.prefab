@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mPlayer: {fileID: 0}
-  mFollowSpeed: 10
+  mFollowSpeed: 15
   mSeparationDistance: 1
   mMinDistanceToPlayer: 2
   mSeparationForce: 0.5

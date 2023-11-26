@@ -8,9 +8,10 @@ public class PlayerController : MonoBehaviour
 {
     public int AmountDisciples
     {
-        get => mAmountDisciples;
-        set => mAmountDisciples = value;
+        get => mDisciplesList.Count;
     }
+    public List<DiscipleController> Disciples => mDisciplesList;
+
     [Header("Settings")]
     [SerializeField] private float mSpeed = 5f;
     [SerializeField] private Transform mFloor;
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody mRb;
     private Vector3 mMovementDirection;
     private Animator mAnimator;
-    private int mAmountDisciples = 0;
+    private List<DiscipleController> mDisciplesList = new List<DiscipleController>();
 
     private void Awake()
     {
