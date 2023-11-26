@@ -25,6 +25,11 @@ public class DiscipleController : MonoBehaviour
     private Jam.StateBehaviour mStateMachine;
     private FlockingData mFlockData;
 
+    private void Awake()
+    {
+        mPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     private void Start()
     {
         mFlockData = new FlockingData()
