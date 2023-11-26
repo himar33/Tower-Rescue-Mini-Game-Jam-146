@@ -14,6 +14,11 @@ public class DiscipleFollowState : DiscipleState
         mDiscipleTransform = mDisciple.transform;
     }
 
+    public override void OnEnter()
+    {
+        mDisciple.Anim.SetBool("IsMoving", true);
+    }
+
     public override void Update()
     {
         Vector3 directionToPlayer = mData.Player.position - mDiscipleTransform.position;
@@ -42,5 +47,7 @@ public class DiscipleFollowState : DiscipleState
         {
             mDisciple.StateMachine.Set(mDisciple.StateMachine.GetState((int)DiscipleStates.IDLE));
         }
+
+        mDiscipleTransform.rotation = Quaternion.Euler(0f, (mData.Player.position.x >= mDisciple.transform.position.x) ? 180f : 0f, 0f);
     }
 }

@@ -6,6 +6,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int AmountDisciples
+    {
+        get => mAmountDisciples;
+        set => mAmountDisciples = value;
+    }
     [Header("Settings")]
     [SerializeField] private float mSpeed = 5f;
     [SerializeField] private Transform mFloor;
@@ -13,14 +18,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody mRb;
     private Vector3 mMovementDirection;
     private Animator mAnimator;
-    private SpriteRenderer mSpriteRenderer;
+    private int mAmountDisciples = 0;
 
     private void Awake()
     {
         mRb = GetComponent<Rigidbody>();
         mMovementDirection = Vector3.zero;
         mAnimator = GetComponentInChildren<Animator>();
-        mSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
@@ -37,8 +41,8 @@ public class PlayerController : MonoBehaviour
         mAnimator.SetFloat("Speed", inputDirection.magnitude);
         if (hInput != 0)
         {
-            mSpriteRenderer.flipX = (hInput > 0) ? false : true;
-        } 
+            transform.localScale = new Vector3((hInput > 0) ? 1 : -1, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     private void FixedUpdate()

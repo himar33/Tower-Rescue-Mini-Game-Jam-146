@@ -126,10 +126,10 @@ TextureImporter:
       name: Student_Idle_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 483
-        width: 92
-        height: 108
+        x: 8
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Student_Idle_1
       rect:
         serializedVersion: 2
-        x: 174
-        y: 483
-        width: 92
-        height: 108
+        x: 152
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: Student_Idle_2
       rect:
         serializedVersion: 2
-        x: 319
-        y: 483
-        width: 91
-        height: 108
+        x: 296
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Student_Idle_3
       rect:
         serializedVersion: 2
-        x: 463
-        y: 483
-        width: 92
-        height: 108
+        x: 440
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: Student_Idle_4
       rect:
         serializedVersion: 2
-        x: 608
-        y: 483
-        width: 92
-        height: 107
+        x: 584
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: Student_Idle_5
       rect:
         serializedVersion: 2
-        x: 752
-        y: 483
-        width: 92
-        height: 107
+        x: 728
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: Student_Idle_6
       rect:
         serializedVersion: 2
-        x: 897
-        y: 483
-        width: 92
-        height: 106
+        x: 872
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: Student_Idle_7
       rect:
         serializedVersion: 2
-        x: 1042
-        y: 483
-        width: 91
-        height: 105
+        x: 1016
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Student_Idle_8
       rect:
         serializedVersion: 2
-        x: 1186
-        y: 483
-        width: 92
-        height: 105
+        x: 1160
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: Student_Idle_9
       rect:
         serializedVersion: 2
-        x: 1330
-        y: 483
-        width: 93
-        height: 104
+        x: 1304
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: Student_Idle_10
       rect:
         serializedVersion: 2
-        x: 1475
-        y: 483
-        width: 93
-        height: 103
+        x: 1448
+        y: 465
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: Student_Idle_11
       rect:
         serializedVersion: 2
-        x: 28
-        y: 328
-        width: 92
-        height: 103
+        x: 8
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: Student_Idle_12
       rect:
         serializedVersion: 2
-        x: 172
-        y: 328
-        width: 93
-        height: 102
+        x: 152
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: Student_Idle_13
       rect:
         serializedVersion: 2
-        x: 317
-        y: 328
-        width: 93
-        height: 102
+        x: 296
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: Student_Idle_14
       rect:
         serializedVersion: 2
-        x: 461
-        y: 328
-        width: 93
-        height: 101
+        x: 440
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: Student_Idle_15
       rect:
         serializedVersion: 2
-        x: 605
-        y: 328
-        width: 94
-        height: 101
+        x: 584
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: Student_Idle_16
       rect:
         serializedVersion: 2
-        x: 750
-        y: 328
-        width: 94
-        height: 101
+        x: 728
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: Student_Idle_17
       rect:
         serializedVersion: 2
-        x: 894
-        y: 328
-        width: 94
-        height: 101
+        x: 872
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +504,10 @@ TextureImporter:
       name: Student_Idle_18
       rect:
         serializedVersion: 2
-        x: 1039
-        y: 328
-        width: 94
-        height: 101
+        x: 1016
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +525,10 @@ TextureImporter:
       name: Student_Idle_19
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 328
-        width: 94
-        height: 100
+        x: 1160
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: Student_Idle_20
       rect:
         serializedVersion: 2
-        x: 1328
-        y: 328
-        width: 94
-        height: 100
+        x: 1304
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,10 +567,10 @@ TextureImporter:
       name: Student_Idle_21
       rect:
         serializedVersion: 2
-        x: 1472
-        y: 328
-        width: 95
-        height: 100
+        x: 1448
+        y: 310
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +588,10 @@ TextureImporter:
       name: Student_Idle_22
       rect:
         serializedVersion: 2
-        x: 25
-        y: 173
-        width: 95
-        height: 101
+        x: 8
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: Student_Idle_23
       rect:
         serializedVersion: 2
-        x: 170
-        y: 173
-        width: 94
-        height: 101
+        x: 152
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,10 +630,10 @@ TextureImporter:
       name: Student_Idle_24
       rect:
         serializedVersion: 2
-        x: 314
-        y: 173
-        width: 95
-        height: 101
+        x: 296
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +651,10 @@ TextureImporter:
       name: Student_Idle_25
       rect:
         serializedVersion: 2
-        x: 459
-        y: 173
-        width: 94
-        height: 101
+        x: 440
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: Student_Idle_26
       rect:
         serializedVersion: 2
-        x: 603
-        y: 173
-        width: 95
-        height: 101
+        x: 584
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,10 +693,10 @@ TextureImporter:
       name: Student_Idle_27
       rect:
         serializedVersion: 2
-        x: 748
-        y: 173
-        width: 95
-        height: 102
+        x: 728
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: Student_Idle_28
       rect:
         serializedVersion: 2
-        x: 893
-        y: 173
-        width: 95
-        height: 102
+        x: 872
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: Student_Idle_29
       rect:
         serializedVersion: 2
-        x: 1038
-        y: 173
-        width: 94
-        height: 102
+        x: 1016
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,10 +756,10 @@ TextureImporter:
       name: Student_Idle_30
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 173
-        width: 95
-        height: 102
+        x: 1160
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: Student_Idle_31
       rect:
         serializedVersion: 2
-        x: 1327
-        y: 173
-        width: 95
-        height: 103
+        x: 1304
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -798,10 +798,10 @@ TextureImporter:
       name: Student_Idle_32
       rect:
         serializedVersion: 2
-        x: 1472
-        y: 173
-        width: 95
-        height: 103
+        x: 1448
+        y: 155
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,10 +819,10 @@ TextureImporter:
       name: Student_Idle_33
       rect:
         serializedVersion: 2
-        x: 26
-        y: 18
-        width: 94
-        height: 104
+        x: 8
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,10 +840,10 @@ TextureImporter:
       name: Student_Idle_34
       rect:
         serializedVersion: 2
-        x: 171
-        y: 18
-        width: 94
-        height: 105
+        x: 152
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -861,10 +861,10 @@ TextureImporter:
       name: Student_Idle_35
       rect:
         serializedVersion: 2
-        x: 316
-        y: 18
-        width: 94
-        height: 105
+        x: 296
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -882,10 +882,10 @@ TextureImporter:
       name: Student_Idle_36
       rect:
         serializedVersion: 2
-        x: 462
-        y: 18
-        width: 92
-        height: 106
+        x: 440
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -903,10 +903,10 @@ TextureImporter:
       name: Student_Idle_37
       rect:
         serializedVersion: 2
-        x: 607
-        y: 18
-        width: 92
-        height: 107
+        x: 584
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,10 +924,10 @@ TextureImporter:
       name: Student_Idle_38
       rect:
         serializedVersion: 2
-        x: 752
-        y: 18
-        width: 92
-        height: 107
+        x: 728
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -945,10 +945,10 @@ TextureImporter:
       name: Student_Idle_39
       rect:
         serializedVersion: 2
-        x: 897
-        y: 18
-        width: 92
-        height: 108
+        x: 872
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -966,10 +966,10 @@ TextureImporter:
       name: Student_Idle_40
       rect:
         serializedVersion: 2
-        x: 1042
-        y: 18
-        width: 92
-        height: 108
+        x: 1016
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -987,10 +987,10 @@ TextureImporter:
       name: Student_Idle_41
       rect:
         serializedVersion: 2
-        x: 1187
-        y: 18
-        width: 91
-        height: 108
+        x: 1160
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1008,10 +1008,10 @@ TextureImporter:
       name: Student_Idle_42
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 18
-        width: 91
-        height: 109
+        x: 1304
+        y: 0
+        width: 136
+        height: 155
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -13,14 +13,20 @@ public class DiscipleIdleState : DiscipleState
         mDiscipleTransform = mDisciple.transform;
     }
 
+    public override void OnEnter()
+    {
+        mDisciple.Anim.SetBool("IsMoving", false);
+    }
+
     public override void Update()
     {
         Vector3 directionToPlayer = mData.Player.position - mDiscipleTransform.position;
-        Vector3 direction = new Vector3(directionToPlayer.x, directionToPlayer.y);
 
-        if (directionToPlayer.magnitude > mData.MinDistanceToPlayer)
+        if (directionToPlayer.magnitude > mData.MinDistanceToPlayer && mDisciple.IsRescued)
         {
             mDisciple.StateMachine.Set(mDisciple.StateMachine.GetState((int)DiscipleStates.FOLLOW));
         }
+
+        mDiscipleTransform.rotation = Quaternion.Euler(0f, (mData.Player.position.x >= mDisciple.transform.position.x) ? 180f : 0f, 0f);
     }
 }
