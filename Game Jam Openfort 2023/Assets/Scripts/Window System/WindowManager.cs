@@ -6,14 +6,25 @@ using UnityEngine.UI;
 
 public class WindowManager : Jam.Singleton<WindowManager>
 {
+    [SerializeField]
+    ObjectPooler mWindowObjectPooler;
+    
     public List<WindowUI> WindowList = new List<WindowUI>();
     public Transform Canvas => mCanvas;
 
     [Header("Settings")]
-    [SerializeField] private Sprite mSpritePanel;
-    [SerializeField] private int mAmountToPool;
+    
+    [SerializeField] 
+    Sprite mSpritePanel;
 
-    private List<GameObject> mPooledObjects;
+    [Header("Test")]
+    
+    [SerializeField]
+    CSpellScriptableObject mTestSpell;
+
+    [SerializeField]
+    Font mFont;
+
     private Transform mCanvas;
     private RectTransform mRectCanvas;
 
@@ -27,59 +38,56 @@ public class WindowManager : Jam.Singleton<WindowManager>
 
     private void Start()
     {
-        mPooledObjects = new List<GameObject>();
-        GameObject tmp;
-        for (int i = 0; i < mAmountToPool; i++)
-        {
-            tmp = CreateWindow(Vector3.zero, Vector2.zero, false, false, false);
-            tmp.SetActive(false);
-            mPooledObjects.Add(tmp);
-        }
+        mWindowObjectPooler.AddConstructor(CreateWindow);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            PopUpWindow(ScreenPositionToCanvas(Input.mousePosition), new Vector2(400, 400));
+            ConfigNewSpellWindow(mTestSpell);
         }
+        
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            PushBackWindow(WindowList.Count - 1);
+            DisableWindow(WindowList.Count - 1);
         }
     }
 
-    public void PopUpWindow(Vector3 position, Vector2 size, bool isFixed = false, bool isScreenLimited = true, bool isSnap = true)
+    public void ConfigNewSpellWindow(CSpellScriptableObject aSpell)
     {
-        GameObject winGO = GetPooledObject();
-        if (winGO != null)
-        {
-            WindowUI winGOUI = winGO.GetComponent<WindowUI>();
-            winGOUI.SetWindowPositionAndSize(position, size);
-            winGOUI.SetSettings(isFixed, isScreenLimited, isSnap);
-            winGO.SetActive(true);
+        Vector3 Position = ScreenPositionToCanvas();
+        Vector2 Size = new Vector2(400, 400);
+        bool isFixed = false;
+        bool isScreenLimited = true;
+        bool isSnap = true;
 
-            WindowList.Add(winGOUI);
-        }
+        GameObject winGO = mWindowObjectPooler.GetPooledObject();
+
+        winGO.transform.localScale = Vector3.one;
+        winGO.GetComponent<CWindowSpellData>().SetSpell(aSpell);
+        
+        WindowUI winGOUI = winGO.GetComponent<WindowUI>();
+        winGOUI.SetWindowPositionAndSize(Position, Size);
+        winGOUI.SetSettings(isFixed, isScreenLimited, isSnap);
+        winGO.SetActive(true);
+
+        WindowList.Add(winGOUI);
     }
 
-    private GameObject GetPooledObject()
+    public void DisableWindow(int index)
     {
-        for (int i = 0; i < mAmountToPool; i++)
+        if (WindowList.Contains(WindowList[index]))
         {
-            if (!mPooledObjects[i].gameObject.activeInHierarchy)
-            {
-                return mPooledObjects[i].gameObject;
-            }
+            WindowList[index].gameObject.SetActive(false);
+            WindowList.RemoveAt(index);
         }
-        return null;
     }
 
-    private GameObject CreateWindow(Vector3 position, Vector2 size, bool isFixed, bool isScreenLimited, bool isSnap)
+    private GameObject CreateWindow()
     {
         //Create Game Object
-        GameObject winGO = new GameObject();
-        winGO.transform.SetParent(mCanvas, false);
+        GameObject winGO = new GameObject("HUD Window");
 
         //Add Image => RectTransform, Canvas Renderer, Default material
         Image winImage = winGO.AddComponent<Image>();
@@ -91,29 +99,33 @@ public class WindowManager : Jam.Singleton<WindowManager>
         winRect.anchorMax = new Vector2(1, 1);
         winRect.anchoredPosition = new Vector2(0.5f, 0.5f);
 
-        //Add Windows UI and configuration
-        WindowUI winUI = winGO.AddComponent<WindowUI>();
-        winUI.SetWindowPositionAndSize(position, size);
-        winUI.SetSettings(isFixed, isScreenLimited, isSnap);
+        winGO.AddComponent<WindowUI>();
+
+        GameObject SpellImageObject = new GameObject("Spell Info Image");
+        SpellImageObject.transform.SetParent(winGO.transform);
+        var InfoImageComponent = SpellImageObject.AddComponent<Image>();
+
+        GameObject SpellTextObject = new GameObject("Spell Info Text");
+        SpellTextObject.transform.SetParent(winGO.transform);
+        var TextComponent = SpellTextObject.AddComponent<Text>();
+        TextComponent.color = Color.black;
+        TextComponent.font = mFont;
+
+        var SpellInfoComponent = winGO.AddComponent<CWindowSpellData>();
+        SpellInfoComponent.SetUIElements(InfoImageComponent, TextComponent);
 
         return winGO;
     }
 
-    public void PushBackWindow(int index)
-    {
-        if (WindowList.Contains(WindowList[index]))
-        {
-            WindowList[index].gameObject.SetActive(false);
-            WindowList.RemoveAt(index);
-        }
-    }
-
-    public Vector3 ScreenPositionToCanvas(Vector3 mousePos)
+    public static Vector3 ScreenPositionToCanvas()
     {
         Vector2 worldPos;
+        
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                mRectCanvas.GetComponent<RectTransform>(), Input.mousePosition, 
-                mRectCanvas.GetComponent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main, out worldPos);
+                Instance.mRectCanvas.GetComponent<RectTransform>(), 
+                Input.mousePosition, 
+                Instance.mRectCanvas.GetComponent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main, out worldPos);
+        
         return worldPos;
     }
 }

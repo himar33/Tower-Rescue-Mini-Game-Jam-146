@@ -44,7 +44,7 @@ Shader "Custom/DiffuseShadowCast"
             // Albedo comes from a texture tinted by color
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
             
-            // clip(o.Alpha - 0.1);
+            clip(c.a - 0.5);
 
             o.Albedo = c.rgb;
             o.Alpha = c.a;

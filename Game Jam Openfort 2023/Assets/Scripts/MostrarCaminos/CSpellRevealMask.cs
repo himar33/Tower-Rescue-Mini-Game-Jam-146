@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
 public class CSpellRevealMask : MonoBehaviour
 {
-    
     CSpellScriptableObject mSpellInfo;
+    
     float mCurrentTime;
+
+    Light mPointLight;
 
     MaterialPropertyBlock mPropertyBlock;
 
@@ -23,14 +27,40 @@ public class CSpellRevealMask : MonoBehaviour
         }
     }
     
-    public void Config(CSpellScriptableObject aSpellInfo) 
+    public void ConfigSpell(CSpellScriptableObject aSpellInfo, Vector2 aDimensions) 
     {
         mSpellInfo = aSpellInfo;
 
         MPB.SetTexture("_MainTex", aSpellInfo.mStencilTexture);
         GetComponent<MeshRenderer>().SetPropertyBlock(MPB);
 
+        CreateLight();
+
+        mPointLight.intensity = aSpellInfo.mLightIntensity;
+
+        mPointLight.GetComponent<COrganicLight>().SetColor(aSpellInfo.mLightColor);
+
         mCurrentTime = 0;
+    }
+
+    private void CreateLight()
+    {
+        if(mPointLight == null)
+        {
+            GameObject mPointLightObject = new GameObject("Point Light"); 
+            mPointLightObject.transform.SetParent(this.transform);
+            
+            mPointLight = mPointLightObject.AddComponent<Light>();
+            mPointLightObject.AddComponent<COrganicLight>();
+            
+            mPointLight.type = LightType.Point;
+        }
+    }
+
+    public void ConfigLight(Vector3 aLightPosition, float aSize)
+    {
+        mPointLight.transform.position = aLightPosition;
+        mPointLight.range = aSize;
     }
 
     public void Update()

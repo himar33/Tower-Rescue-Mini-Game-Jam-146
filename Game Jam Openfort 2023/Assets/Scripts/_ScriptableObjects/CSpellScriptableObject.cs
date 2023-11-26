@@ -10,9 +10,14 @@ public class CSpellScriptableObject : ScriptableObject
     
     public Texture mStencilTexture;
     
-    public Vector2 mLightPosition01;
-
     public float mActiveTimeSeconds;
 
     public float mFadeSeconds = 0.5f;
+
+    [Header("Lights")]
+    public Vector2 mLightPosition01;
+
+    public float mLightIntensity;
+
+    public Color mLightColor;
 }

@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973841fd9b2ff5b4a81cc3aafc3df5ef, type: 3}
   m_Name: spell_L
   m_EditorClassIdentifier: 
-  mDescription: 
+  mDescription: L Spell1
   mStencilTexture: {fileID: 2800000, guid: 6f5652f7d7b4da74d9f0322988bddd21, type: 3}
-  mLightPosition01: {x: 0, y: 0}
   mActiveTimeSeconds: 5
+  mFadeSeconds: 0.5
+  mLightPosition01: {x: 0, y: 0}
+  mLightIntensity: 0
+  mLightColor: {r: 0, g: 0, b: 0, a: 0}
