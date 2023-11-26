@@ -12,9 +12,9 @@ public class CSonarPing : MonoBehaviour
         transform.localScale = Vector3.zero;
     }
     
-    public void Show()
+    public void InitShow(float mStartDelay)
     {
-        mCurrentTime = 0;
+        mCurrentTime = -mStartDelay;
     }
 
     public void Update()
