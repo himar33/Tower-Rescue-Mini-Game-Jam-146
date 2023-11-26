@@ -43,6 +43,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        mRb.velocity = mMovementDirection * mSpeed * Time.deltaTime;
+        mRb.velocity = mMovementDirection * mSpeed * Time.fixedDeltaTime;
     }
 }
