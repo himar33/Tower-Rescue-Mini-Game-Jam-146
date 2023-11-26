@@ -298,7 +298,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &193110572
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PoolerID: Masks
-  ParentTransform: {fileID: 0}
+  mParentTransform: {fileID: 0}
 --- !u!4 &972127401
 Transform:
   m_ObjectHideFlags: 0
@@ -1311,12 +1311,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mHUDPingPooler: {fileID: 2119505695}
-  mSonarCenter: {fileID: 989580387}
-  mAppearAllTime: 2
   mPingTypes:
-  - {mItemParent: {fileID: 536738295}, mHUDSprite: {fileID: 21300000, guid: 08bdce2bd835dae448b69587da971f8a, type: 3}}
-  - {mItemParent: {fileID: 1002498068}, mHUDSprite: {fileID: 21300000, guid: 674791f24357bab4f90b1a3488cd012b, type: 3}}
-  - {mItemParent: {fileID: 845800106}, mHUDSprite: {fileID: 21300000, guid: fb4af6a37e566f84ea9cf16346b755a9, type: 3}}
+  - mItemParent: {fileID: 536738295}
+    mHUDSprite: {fileID: 21300000, guid: 08bdce2bd835dae448b69587da971f8a, type: 3}
+  - mItemParent: {fileID: 1002498068}
+    mHUDSprite: {fileID: 21300000, guid: 674791f24357bab4f90b1a3488cd012b, type: 3}
+  - mItemParent: {fileID: 845800106}
+    mHUDSprite: {fileID: 21300000, guid: fb4af6a37e566f84ea9cf16346b755a9, type: 3}
 --- !u!1 &1002498067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,7 +1656,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f157c6107471f874aa1f30c2c46ebab8, type: 2}
+  - {fileID: 2100000, guid: 0c4f96a819dd2bc4e9c21f86c19b52ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2040,4 +2041,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PoolerID: HUDItems
-  ParentTransform: {fileID: 0}
+  mParentTransform: {fileID: 335953454}

@@ -11,7 +11,7 @@ public class ObjectPooler : MonoBehaviour
     string PoolerID;
 
     [SerializeField]
-    Transform ParentTransform;
+    Transform mParentTransform;
 
     List<GameObject> mInstances;
 
@@ -31,6 +31,7 @@ public class ObjectPooler : MonoBehaviour
         }
 
         GameObject NewGameObject = CreateNewInstanceFunction();
+        NewGameObject.transform.SetParent(mParentTransform);
         mInstances.Add(NewGameObject);
 
         return NewGameObject;

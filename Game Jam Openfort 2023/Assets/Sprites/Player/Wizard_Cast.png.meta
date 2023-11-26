@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 192
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -127,11 +127,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1157
-        width: 951.36365
-        height: 1149
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Wizard_Cast_1
       rect:
         serializedVersion: 2
-        x: 955
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 238
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: Wizard_Cast_2
       rect:
         serializedVersion: 2
-        x: 1910
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 476
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: Wizard_Cast_3
       rect:
         serializedVersion: 2
-        x: 2865
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 714
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: Wizard_Cast_4
       rect:
         serializedVersion: 2
-        x: 3820
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 952
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: Wizard_Cast_5
       rect:
         serializedVersion: 2
-        x: 4775
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 1190
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: Wizard_Cast_6
       rect:
         serializedVersion: 2
-        x: 5730
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 1428
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: Wizard_Cast_7
       rect:
         serializedVersion: 2
-        x: 6685
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 1666
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: Wizard_Cast_8
       rect:
         serializedVersion: 2
-        x: 7640
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 1904
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: Wizard_Cast_9
       rect:
         serializedVersion: 2
-        x: 8595
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 2142
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: Wizard_Cast_10
       rect:
         serializedVersion: 2
-        x: 9550
-        y: 1157
-        width: 951.36365
-        height: 1149
+        x: 2380
+        y: 288
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -358,11 +358,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 951.36365
-        height: 1149
+        y: 0
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,12 +378,12 @@ TextureImporter:
       name: Wizard_Cast_12
       rect:
         serializedVersion: 2
-        x: 955
-        y: 4
-        width: 951.36365
-        height: 1149
+        x: 238
+        y: 0
+        width: 238.81818
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,31 +399,10 @@ TextureImporter:
       name: Wizard_Cast_13
       rect:
         serializedVersion: 2
-        x: 1910
-        y: 4
-        width: 951.36365
-        height: 1149
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7977613e49fc4924e806081c16fba854
-      internalID: 1558603896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Cast_14
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 476
         y: 0
-        width: 10509
-        height: 2306
+        width: 238.81818
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,8 +410,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e944d118780e4242922af2b4c5d41a6
-      internalID: -1242147613
+      spriteID: 7977613e49fc4924e806081c16fba854
+      internalID: 1558603896
       vertices: []
       indices: 
       edges: []
@@ -454,7 +433,6 @@ TextureImporter:
       Wizard_Cast_11: -270359470
       Wizard_Cast_12: 221525755
       Wizard_Cast_13: 1558603896
-      Wizard_Cast_14: -1242147613
       Wizard_Cast_2: 1910991193
       Wizard_Cast_3: 564354706
       Wizard_Cast_4: -1972999916
