@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class WindowUI : MonoBehaviour, IDragHandler, IPointerDownHandler
+public class WindowUI : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
     [Header("Settings")]
     [SerializeField] private bool mIsFixed;
@@ -20,7 +21,7 @@ public class WindowUI : MonoBehaviour, IDragHandler, IPointerDownHandler
     {
         if (eventData.button == mMouseButton)
         {
-            mRectTransform.localPosition = Input.mousePosition - mMouseDragStartPos;
+            mRectTransform.localPosition = WindowManager.ScreenPositionToCanvas() - mMouseDragStartPos;
             if (mIsScreenLimited) CheckScreenBorder();
             if (mIsSnap) SnapEachOther();
         }
@@ -30,9 +31,19 @@ public class WindowUI : MonoBehaviour, IDragHandler, IPointerDownHandler
     {
         if (eventData.button == mMouseButton)
         {
-            mMouseDragStartPos = Input.mousePosition - mRectTransform.localPosition;
+            mMouseDragStartPos = WindowManager.ScreenPositionToCanvas() - mRectTransform.localPosition;
         }
         transform.SetAsLastSibling();
+
+        CCastSpellManager.instance.NotifyDrag(this.gameObject);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (eventData.button == mMouseButton)
+        {
+            CCastSpellManager.instance.NotifyUnclick(this.gameObject);
+        }   
     }
 
     public void SetWindowPositionAndSize(Vector3 position, Vector2 size)
