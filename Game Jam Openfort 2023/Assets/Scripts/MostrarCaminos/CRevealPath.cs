@@ -10,11 +10,10 @@ using UnityEngine.UI;
 
 public class CRevealPath : MonoBehaviour
 {
+    const KeyCode mClickKeycode = KeyCode.Mouse0;
+    
     [Header("Generation")]
-    
-    [SerializeField]
-    CSpellScriptableObject mSpellInfo;
-    
+        
     [SerializeField]
     Material mMaskMaterial;
 
@@ -30,6 +29,14 @@ public class CRevealPath : MonoBehaviour
     [SerializeField]
     ObjectPooler mMaskObjectPooler;
 
+    [Header("Validation")]
+    [SerializeField]
+    Transform mHUDWindowTopLeftCorner;
+
+    [SerializeField]
+    Transform mHUDWindowBotRightCorner;
+
+
     [Header("Preview Mask")]
 
     [SerializeField]
@@ -42,16 +49,16 @@ public class CRevealPath : MonoBehaviour
     Color mPreviewInvalidColor;
     
     // Drag positions from camera to world
+    CSpellScriptableObject mActiveSpellInfo;
+    Vector2 mCornerTLWorldPos;
+    Vector2 mCornerBRWorldPos;
     Vector3 mInitShadowWorldPoint;
     Vector3 mCurrentShadowWorldPoint;
     Vector2 mMaskDimensions;
-
     GameObject mPreviewObject;
     Mesh mPreviewQuadMesh;
-
     bool mIsValidDrag;
-
-    const KeyCode mClickKeycode = KeyCode.Mouse0;
+    public Action OnMaskCreated;
 
     MaterialPropertyBlock mPreviewMaterialPropertyBlock;
     
@@ -71,6 +78,35 @@ public class CRevealPath : MonoBehaviour
         mInitShadowWorldPoint = Vector2.zero;
 
         mMaskObjectPooler.AddConstructor(CreateMaskGameobject);
+
+        Ray CornerTLRay = Camera.main.ScreenPointToRay(mHUDWindowTopLeftCorner.position);
+        Ray CornerBRRay = Camera.main.ScreenPointToRay(mHUDWindowBotRightCorner.position);
+
+        if(Physics.Raycast(CornerTLRay, out RaycastHit HitInfoTL, Mathf.Infinity, mRevealObjectMask))
+        {
+            mCornerTLWorldPos = HitInfoTL.point;
+        }
+
+        if(Physics.Raycast(CornerBRRay, out RaycastHit HitInfoBR, Mathf.Infinity, mRevealObjectMask))
+        {
+            mCornerBRWorldPos = HitInfoBR.point;
+        }
+    }
+
+    private void OnEnable() 
+    {
+        if(mPreviewObject && Input.GetKey(mClickKeycode))
+        {
+            mPreviewObject.SetActive(true);    
+        }
+    }
+
+    private void OnDisable()
+    {
+        if(mPreviewObject)
+        {
+            mPreviewObject.SetActive(false);    
+        }
     }
     
     private void Update() 
@@ -87,20 +123,22 @@ public class CRevealPath : MonoBehaviour
             if(Physics.Raycast(ClickRay, out RaycastHit HitInfo, Mathf.Infinity, mRevealObjectMask))
             {
                 mInitShadowWorldPoint = HitInfo.point;
-                mIsValidDrag = true;
+                
+                UpdatePreviewMesh();
+                mPreviewObject.SetActive(true);
             }
             else
             {
                 Debug.LogError("There should be an object to mask a reveal path");
-                mIsValidDrag = false;
             }
         }
-
 
         if(Input.GetKey(mClickKeycode))
         {
             Ray DragRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             
+            ValidateDrag();
+
             if(Physics.Raycast(DragRay, out RaycastHit HitInfo, Mathf.Infinity, mRevealObjectMask))
             {
                 mMaskDimensions = new Vector2()
@@ -111,20 +149,19 @@ public class CRevealPath : MonoBehaviour
                 
                 UpdatePreviewMesh();
 
-                mPreviewObject.SetActive(true);
-
                 mCurrentShadowWorldPoint = HitInfo.point;
-                mIsValidDrag = true;
             }
             else
             {
-                mIsValidDrag = false;
                 UpdatePreviewMesh();
             }
         }
 
+
         if(Input.GetKeyUp(mClickKeycode))
         {
+            ValidateDrag();
+            
             if(mIsValidDrag)
             {
                 Mesh NewMesh = new Mesh();
@@ -135,17 +172,17 @@ public class CRevealPath : MonoBehaviour
                 var NewMaskObject = mMaskObjectPooler.GetPooledObject();
                 NewMaskObject.GetComponent<MeshFilter>().mesh = NewMesh;
 
-                NewMaskObject.GetComponent<CSpellRevealMask>().ConfigSpell(mSpellInfo, mMaskDimensions);
+                NewMaskObject.GetComponent<CSpellRevealMask>().ConfigSpell(mActiveSpellInfo, mMaskDimensions);
 
                 Vector3 LightShadowPos = new Vector3()
                 {
                     x = mInitShadowWorldPoint.x < mCurrentShadowWorldPoint.x ? 
-                        Mathf.Lerp(mInitShadowWorldPoint.x, mCurrentShadowWorldPoint.x, mSpellInfo.mLightPosition01.x) :
-                        Mathf.Lerp(mCurrentShadowWorldPoint.x, mInitShadowWorldPoint.x, mSpellInfo.mLightPosition01.x) ,
+                        Mathf.Lerp(mInitShadowWorldPoint.x, mCurrentShadowWorldPoint.x, mActiveSpellInfo.mLightPosition01.x) :
+                        Mathf.Lerp(mCurrentShadowWorldPoint.x, mInitShadowWorldPoint.x, mActiveSpellInfo.mLightPosition01.x) ,
                     
                     y = mInitShadowWorldPoint.y < mCurrentShadowWorldPoint.y ? 
-                        Mathf.Lerp(mInitShadowWorldPoint.y, mCurrentShadowWorldPoint.y, mSpellInfo.mLightPosition01.y) :
-                        Mathf.Lerp(mCurrentShadowWorldPoint.y, mInitShadowWorldPoint.y, mSpellInfo.mLightPosition01.y) ,
+                        Mathf.Lerp(mInitShadowWorldPoint.y, mCurrentShadowWorldPoint.y, mActiveSpellInfo.mLightPosition01.y) :
+                        Mathf.Lerp(mCurrentShadowWorldPoint.y, mInitShadowWorldPoint.y, mActiveSpellInfo.mLightPosition01.y) ,
                     
                     z = Mathf.Lerp(mInitShadowWorldPoint.z, mCurrentShadowWorldPoint.z, 0.5f)
                 };
@@ -158,12 +195,25 @@ public class CRevealPath : MonoBehaviour
                 }
                 
                 NewMaskObject.SetActive(true);
+
+                OnMaskCreated();
             }
 
             mPreviewObject.SetActive(false);
 
             mInitShadowWorldPoint = Vector2.zero;
         }
+    }
+
+    void ValidateDrag()
+    {
+        bool IsInitPosInsideBounds = mInitShadowWorldPoint.x > mCornerTLWorldPos.x && mInitShadowWorldPoint.x < mCornerBRWorldPos.x
+                                    && mInitShadowWorldPoint.y < mCornerTLWorldPos.y && mInitShadowWorldPoint.y > mCornerBRWorldPos.y;
+        
+        bool IsFinalPosInsideBounds = mCurrentShadowWorldPoint.x > mCornerTLWorldPos.x && mCurrentShadowWorldPoint.x < mCornerBRWorldPos.x
+                                    && mCurrentShadowWorldPoint.y < mCornerTLWorldPos.y && mCurrentShadowWorldPoint.y > mCornerBRWorldPos.y;
+
+        mIsValidDrag = IsInitPosInsideBounds && IsFinalPosInsideBounds;
     }
 
     void ClampPositionToTopLeftCorner()
@@ -215,10 +265,9 @@ public class CRevealPath : MonoBehaviour
 
         SetBoundMesh(ref mPreviewQuadMesh, mInitShadowWorldPoint, mCurrentShadowWorldPoint);
 
-        PREVIEW_MPB.SetTexture("_MainTex", mSpellInfo.mStencilTexture);
+        PREVIEW_MPB.SetTexture("_MainTex", mActiveSpellInfo.mStencilTexture);
         PREVIEW_MPB.SetFloat("_MaskWidth", mMaskDimensions.x);
         PREVIEW_MPB.SetFloat("_MaskHeight", mMaskDimensions.y);
-        Debug.Log(mMaskDimensions.x);
         PREVIEW_MPB.SetColor("_HighlightColor", mIsValidDrag ? mPreviewValidColor : mPreviewInvalidColor);
         mPreviewObject.GetComponent<MeshRenderer>().SetPropertyBlock(PREVIEW_MPB);
     }
@@ -276,5 +325,10 @@ public class CRevealPath : MonoBehaviour
         var SpellMaskComponent = NewMaskObject.AddComponent<CSpellRevealMask>();
 
         return NewMaskObject;
+    }
+
+    public void SetActiveSpell(CSpellScriptableObject aSpell)
+    {
+        mActiveSpellInfo = aSpell;
     }
 }
