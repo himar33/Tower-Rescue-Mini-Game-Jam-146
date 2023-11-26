@@ -985,10 +985,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ba6a0a0e76c254bb88b69b53ad9894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 5
-  mFloorTransform: {fileID: 1020583974}
-  mPlayerTransform: {fileID: 606690037}
-  radioMelee: 2
+  mChaseSpeed: 10
+  mTarget: {fileID: 606690037}
+  mDetectionRadius: 10
+  mDistanceToAttack: 3
 --- !u!136 &8284693364357447192
 CapsuleCollider:
   m_ObjectHideFlags: 0

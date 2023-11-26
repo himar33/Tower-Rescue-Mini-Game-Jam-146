@@ -1,97 +1,77 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class EnemyController : MonoBehaviour
 {
+    public Jam.StateBehaviour StateMachine => mStateMachine;
+    public Animator Anim => mAnim;
+    public Transform Target => mTarget;
+    public float DetectionRadius => mDetectionRadius;
+    public float ChaseSpeed => mChaseSpeed;
+    public float DistanceToAttack => mDistanceToAttack;
 
-    public float vel = 5f;
-    public Transform mFloorTransform;
-    public Transform mPlayerTransform;
+    [Header("Enemy Settings")]
+    [SerializeField] private float mChaseSpeed;
+    [SerializeField] private Transform mTarget;
+    [SerializeField] private float mDetectionRadius = 5f;
+    [SerializeField] private float mDistanceToAttack = 1f;
 
-    [Range(1f,10f)]
-    public float radioMelee;  // Asigna el Slider desde el Inspector.
-    private SphereCollider collDetect;
+    private Jam.StateBehaviour mStateMachine;
+    private Animator mAnim;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        collDetect = GetComponent<SphereCollider>();
+        mAnim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        MoveEnemy();
+        mStateMachine = new EnemyStateMachine();
 
-    }
-    void MoveEnemy()
-    {
-        // Obtén la entrada del teclado o cualquier otra fuente de entrada.
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float mvVertical = Input.GetAxis("Vertical");
+        StateMachine.Add((int)EnemyStates.IDLE, new EnemyIdle(this));
+        StateMachine.Add((int)EnemyStates.CHASE, new EnemyChase(this));
+        StateMachine.Add((int)EnemyStates.ATTACK, new EnemyAttack(this));
 
-        // Calcula la dirección del movimiento en el plano XZ.
-        Vector3 dir = new Vector3(moveHorizontal, 0, mvVertical).normalized;
-
-        transform.Translate((mFloorTransform.right* dir.x + mFloorTransform.forward* dir.z)*vel*Time.deltaTime);
-
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Alert();
-            Pursue();
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            //todo dejar de seguir
-            //Pursue();
-        }
+        StateMachine.Set(StateMachine.GetState((int)DiscipleStates.IDLE));
     }
 
-    public void Alert() 
+    private void Update()
     {
-        // Obtiene las posiciones de los colliders.
-        Vector3 pos1 = transform.position;
-        Vector3 pos2 = mPlayerTransform.transform.position;
-
-        Debug.Log("¡Jugador detectado!");
-        if (Vector3.Distance(pos1, pos2) < radioMelee)
-        {
-            Melee();
-        }
+        StateMachine.Update();
     }
 
-    public void Melee()
+    private void FixedUpdate()
     {
-        // Calcula la dirección hacia el jugador sin cambiar la rotación del enemigo.
-        Vector3 dir = (mPlayerTransform.transform.position - transform.position).normalized;
-
-        //TODO hacer que primero cargue la embestida
-
-        // Mueve el enemigo en la dirección calculada.
-        transform.Translate((mFloorTransform.right * dir.x + (mFloorTransform.forward * dir.z)) * (vel * 2) * Time.deltaTime, Space.World);
-
-    }
-    void Pursue()
-    {
-        // Calcula la dirección hacia el jugador sin cambiar la rotación del enemigo.
-        Vector3 dir = (mPlayerTransform.transform.position - transform.position).normalized;
-
-        // Mueve el enemigo en la dirección calculada.
-        transform.Translate((mFloorTransform.right * dir.x + mFloorTransform.forward * dir.z) * vel * Time.deltaTime, Space.World);
-     
+        StateMachine.FixedUpdate();
     }
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, mDetectionRadius);
+
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.localPosition, radioMelee);
+        Gizmos.DrawWireSphere(transform.position, mDistanceToAttack);
+    }
+
+    public void AttackFinished()
+    {
+        Anim.ResetTrigger("CanAttack");
+
+        Vector3 distanceToTarget = Target.position - transform.position;
+        if (distanceToTarget.magnitude > DetectionRadius)
+        {
+            StateMachine.Set(StateMachine.GetState((int)EnemyStates.IDLE));
+        }
+        else if (distanceToTarget.magnitude < DistanceToAttack)
+        {
+            StateMachine.Set(StateMachine.GetState((int)EnemyStates.ATTACK));
+        }
+        else
+        {
+            StateMachine.Set(StateMachine.GetState((int)EnemyStates.CHASE));
+        }
     }
 }

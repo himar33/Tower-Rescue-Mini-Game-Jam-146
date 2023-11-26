@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStateMachine : MonoBehaviour
+public enum EnemyStates
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    IDLE = 0,
+    CHASE,
+    ATTACK
+}
 
-    // Update is called once per frame
-    void Update()
+public class EnemyStateMachine : Jam.StateBehaviour
+{
+    public EnemyStateMachine() : base() { }
+    public void Add(EnemyState state)
     {
-        
+        _states.Add((int)state.ID, state);
+    }
+    public EnemyState GetState(EnemyStates key)
+    {
+        return (EnemyState)GetState((int)key);
+    }
+    public void Set(EnemyStates stateKey)
+    {
+        Jam.State state = _states[(int)stateKey];
+        if (state != null)
+        {
+            Set(state);
+        }
     }
 }
