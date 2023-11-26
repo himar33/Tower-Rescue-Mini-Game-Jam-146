@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d530f12cee93941429983b4ba07328c7
+guid: 648b74c795d10e84398fdb763d870482
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -123,286 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wizard_Run_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0ee8d64556fd814aa969cd47b2aae88
-      internalID: -77463185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_1
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fac03483921560f44828c3331c1e19e2
-      internalID: -1712571569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_2
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1059607f72c1bf14f9a501b978821c75
-      internalID: 2090053918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_3
-      rect:
-        serializedVersion: 2
-        x: 612
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45a4d698c2c7482438c7a31e76c9ecec
-      internalID: -40409176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_4
-      rect:
-        serializedVersion: 2
-        x: 816
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d237f79c1464f524c9518654033fdc0e
-      internalID: 4162516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_5
-      rect:
-        serializedVersion: 2
-        x: 1020
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f983683f3ed80049872f06f74c215b2
-      internalID: 1433254196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_6
-      rect:
-        serializedVersion: 2
-        x: 1224
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e818a1ecb9efeec40b9105bf0baa2a58
-      internalID: -1750732139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_7
-      rect:
-        serializedVersion: 2
-        x: 1428
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3a44a9340c79774db859accf102c860
-      internalID: 950921963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_8
-      rect:
-        serializedVersion: 2
-        x: 1632
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bdf98aa45e35724d97ebe8f1bbed584
-      internalID: 1619431633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_9
-      rect:
-        serializedVersion: 2
-        x: 1836
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b61dfffde41e1f4593d5bb70f4532aa
-      internalID: -614703158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_10
-      rect:
-        serializedVersion: 2
-        x: 2040
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0633aa59ddb18bc4c8795b2d9f995424
-      internalID: -865977240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_11
-      rect:
-        serializedVersion: 2
-        x: 2244
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e143b68499e1de48b9af5a9039bca7e
-      internalID: -1338229018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_12
-      rect:
-        serializedVersion: 2
-        x: 2448
-        y: 288
-        width: 204.53847
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27748bbdf5b1b1d46843850e41afe159
-      internalID: -140367041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard_Run_13
+      name: Student_Run_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 204.53847
-        height: 288
+        width: 144.72728
+        height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,8 +137,218 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2069a0b28fd64864a9289ec4514a45e5
-      internalID: -509700235
+      spriteID: f259c9ac5732c6b4da46ffb1c90893d3
+      internalID: 725628299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0dec4f5601c9c479a41d0c5bbc70ec
+      internalID: -1523318704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0452fed9daaaa094ba786b4d3e1a9d4f
+      internalID: 1930194777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340f1534520685746b3eddd368612a22
+      internalID: -30179846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd63eb3f08d12e468d5e97d4f428212
+      internalID: -712267873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c35e923169ff7c4993762b86596b4ab
+      internalID: -156487190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_6
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8b663c2d99ab341ad0983ff261ab4c
+      internalID: 329479902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_7
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25310bbcabe8fa341b45e3d2dc791556
+      internalID: -1206799328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_8
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c8d6045936f144c85d0f280fc783b2
+      internalID: -308570350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_9
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a014e1aba74dd145abcb3bd3a6fe2b1
+      internalID: -228206076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Student_Run_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 144.72728
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed85495523206de40bf4a52e6fca56a3
+      internalID: -1121271630
       vertices: []
       indices: 
       edges: []
@@ -419,7 +356,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cd876b84fbae758479377ded88ccc39f
+    spriteID: 7a043ad64abfd4f40b3324cedaaec78f
     internalID: 0
     vertices: []
     indices: 
@@ -427,20 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wizard_Run_0: -77463185
-      Wizard_Run_1: -1712571569
-      Wizard_Run_10: -865977240
-      Wizard_Run_11: -1338229018
-      Wizard_Run_12: -140367041
-      Wizard_Run_13: -509700235
-      Wizard_Run_2: 2090053918
-      Wizard_Run_3: -40409176
-      Wizard_Run_4: 4162516
-      Wizard_Run_5: 1433254196
-      Wizard_Run_6: -1750732139
-      Wizard_Run_7: 950921963
-      Wizard_Run_8: 1619431633
-      Wizard_Run_9: -614703158
+      Student_Run_0: 725628299
+      Student_Run_1: -1523318704
+      Student_Run_10: -1121271630
+      Student_Run_2: 1930194777
+      Student_Run_3: -30179846
+      Student_Run_4: -712267873
+      Student_Run_5: -156487190
+      Student_Run_6: 329479902
+      Student_Run_7: -1206799328
+      Student_Run_8: -308570350
+      Student_Run_9: -228206076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

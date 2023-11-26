@@ -44,11 +44,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 192
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 5976
-        width: 800
-        height: 996
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Wizard_Idle_1
       rect:
         serializedVersion: 2
-        x: 800
-        y: 5976
-        width: 800
-        height: 996
+        x: 200
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: Wizard_Idle_2
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 5976
-        width: 800
-        height: 996
+        x: 400
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Wizard_Idle_3
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 5976
-        width: 800
-        height: 996
+        x: 600
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: Wizard_Idle_4
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 5976
-        width: 800
-        height: 996
+        x: 800
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: Wizard_Idle_5
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 5976
-        width: 800
-        height: 996
+        x: 1000
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: Wizard_Idle_6
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 5976
-        width: 800
-        height: 996
+        x: 1200
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: Wizard_Idle_7
       rect:
         serializedVersion: 2
-        x: 5600
-        y: 5976
-        width: 800
-        height: 996
+        x: 1400
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Wizard_Idle_8
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 5976
-        width: 800
-        height: 996
+        x: 1600
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: Wizard_Idle_9
       rect:
         serializedVersion: 2
-        x: 7200
-        y: 5976
-        width: 800
-        height: 996
+        x: 1800
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: Wizard_Idle_10
       rect:
         serializedVersion: 2
-        x: 8000
-        y: 5976
-        width: 800
-        height: 996
+        x: 2000
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: Wizard_Idle_11
       rect:
         serializedVersion: 2
-        x: 8800
-        y: 5976
-        width: 800
-        height: 996
+        x: 2200
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: Wizard_Idle_12
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 5976
-        width: 800
-        height: 996
+        x: 2400
+        y: 1494
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,9 +400,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4980
-        width: 800
-        height: 996
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: Wizard_Idle_14
       rect:
         serializedVersion: 2
-        x: 800
-        y: 4980
-        width: 800
-        height: 996
+        x: 200
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: Wizard_Idle_15
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 4980
-        width: 800
-        height: 996
+        x: 400
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: Wizard_Idle_16
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 4980
-        width: 800
-        height: 996
+        x: 600
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: Wizard_Idle_17
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 4980
-        width: 800
-        height: 996
+        x: 800
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +504,10 @@ TextureImporter:
       name: Wizard_Idle_18
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 4980
-        width: 800
-        height: 996
+        x: 1000
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +525,10 @@ TextureImporter:
       name: Wizard_Idle_19
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 4980
-        width: 800
-        height: 996
+        x: 1200
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: Wizard_Idle_20
       rect:
         serializedVersion: 2
-        x: 5600
-        y: 4980
-        width: 800
-        height: 996
+        x: 1400
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,10 +567,10 @@ TextureImporter:
       name: Wizard_Idle_21
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 4980
-        width: 800
-        height: 996
+        x: 1600
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +588,10 @@ TextureImporter:
       name: Wizard_Idle_22
       rect:
         serializedVersion: 2
-        x: 7200
-        y: 4980
-        width: 800
-        height: 996
+        x: 1800
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: Wizard_Idle_23
       rect:
         serializedVersion: 2
-        x: 8000
-        y: 4980
-        width: 800
-        height: 996
+        x: 2000
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,10 +630,10 @@ TextureImporter:
       name: Wizard_Idle_24
       rect:
         serializedVersion: 2
-        x: 8800
-        y: 4980
-        width: 800
-        height: 996
+        x: 2200
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +651,10 @@ TextureImporter:
       name: Wizard_Idle_25
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 4980
-        width: 800
-        height: 996
+        x: 2400
+        y: 1245
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -673,9 +673,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3984
-        width: 800
-        height: 996
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,10 +693,10 @@ TextureImporter:
       name: Wizard_Idle_27
       rect:
         serializedVersion: 2
-        x: 800
-        y: 3984
-        width: 800
-        height: 996
+        x: 200
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: Wizard_Idle_28
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 3984
-        width: 800
-        height: 996
+        x: 400
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: Wizard_Idle_29
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 3984
-        width: 800
-        height: 996
+        x: 600
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,10 +756,10 @@ TextureImporter:
       name: Wizard_Idle_30
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 3984
-        width: 800
-        height: 996
+        x: 800
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: Wizard_Idle_31
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 3984
-        width: 800
-        height: 996
+        x: 1000
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -798,10 +798,10 @@ TextureImporter:
       name: Wizard_Idle_32
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 3984
-        width: 800
-        height: 996
+        x: 1200
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,10 +819,10 @@ TextureImporter:
       name: Wizard_Idle_33
       rect:
         serializedVersion: 2
-        x: 5600
-        y: 3984
-        width: 800
-        height: 996
+        x: 1400
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,10 +840,10 @@ TextureImporter:
       name: Wizard_Idle_34
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 3984
-        width: 800
-        height: 996
+        x: 1600
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -861,10 +861,10 @@ TextureImporter:
       name: Wizard_Idle_35
       rect:
         serializedVersion: 2
-        x: 7200
-        y: 3984
-        width: 800
-        height: 996
+        x: 1800
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -882,10 +882,10 @@ TextureImporter:
       name: Wizard_Idle_36
       rect:
         serializedVersion: 2
-        x: 8000
-        y: 3984
-        width: 800
-        height: 996
+        x: 2000
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -903,10 +903,10 @@ TextureImporter:
       name: Wizard_Idle_37
       rect:
         serializedVersion: 2
-        x: 8800
-        y: 3984
-        width: 800
-        height: 996
+        x: 2200
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,10 +924,10 @@ TextureImporter:
       name: Wizard_Idle_38
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 3984
-        width: 800
-        height: 996
+        x: 2400
+        y: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -946,9 +946,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2988
-        width: 800
-        height: 996
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -966,10 +966,10 @@ TextureImporter:
       name: Wizard_Idle_40
       rect:
         serializedVersion: 2
-        x: 800
-        y: 2988
-        width: 800
-        height: 996
+        x: 200
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -987,10 +987,10 @@ TextureImporter:
       name: Wizard_Idle_41
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 2988
-        width: 800
-        height: 996
+        x: 400
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1008,10 +1008,10 @@ TextureImporter:
       name: Wizard_Idle_42
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 2988
-        width: 800
-        height: 996
+        x: 600
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1029,10 +1029,10 @@ TextureImporter:
       name: Wizard_Idle_43
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 2988
-        width: 800
-        height: 996
+        x: 800
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1050,10 +1050,10 @@ TextureImporter:
       name: Wizard_Idle_44
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 2988
-        width: 800
-        height: 996
+        x: 1000
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1071,10 +1071,10 @@ TextureImporter:
       name: Wizard_Idle_45
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 2988
-        width: 800
-        height: 996
+        x: 1200
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1092,10 +1092,10 @@ TextureImporter:
       name: Wizard_Idle_46
       rect:
         serializedVersion: 2
-        x: 5600
-        y: 2988
-        width: 800
-        height: 996
+        x: 1400
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1113,10 +1113,10 @@ TextureImporter:
       name: Wizard_Idle_47
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 2988
-        width: 800
-        height: 996
+        x: 1600
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1134,10 +1134,10 @@ TextureImporter:
       name: Wizard_Idle_48
       rect:
         serializedVersion: 2
-        x: 7200
-        y: 2988
-        width: 800
-        height: 996
+        x: 1800
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1155,10 +1155,10 @@ TextureImporter:
       name: Wizard_Idle_49
       rect:
         serializedVersion: 2
-        x: 8000
-        y: 2988
-        width: 800
-        height: 996
+        x: 2000
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1176,10 +1176,10 @@ TextureImporter:
       name: Wizard_Idle_50
       rect:
         serializedVersion: 2
-        x: 8800
-        y: 2988
-        width: 800
-        height: 996
+        x: 2200
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1197,10 +1197,10 @@ TextureImporter:
       name: Wizard_Idle_51
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 2988
-        width: 800
-        height: 996
+        x: 2400
+        y: 747
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1219,9 +1219,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1992
-        width: 800
-        height: 996
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1239,10 +1239,10 @@ TextureImporter:
       name: Wizard_Idle_53
       rect:
         serializedVersion: 2
-        x: 800
-        y: 1992
-        width: 800
-        height: 996
+        x: 200
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1260,10 +1260,10 @@ TextureImporter:
       name: Wizard_Idle_54
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 1992
-        width: 800
-        height: 996
+        x: 400
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1281,10 +1281,10 @@ TextureImporter:
       name: Wizard_Idle_55
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 1992
-        width: 800
-        height: 996
+        x: 600
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1302,10 +1302,10 @@ TextureImporter:
       name: Wizard_Idle_56
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 1992
-        width: 800
-        height: 996
+        x: 800
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1323,10 +1323,10 @@ TextureImporter:
       name: Wizard_Idle_57
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 1992
-        width: 800
-        height: 996
+        x: 1000
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1344,10 +1344,10 @@ TextureImporter:
       name: Wizard_Idle_58
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 1992
-        width: 800
-        height: 996
+        x: 1200
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1365,10 +1365,10 @@ TextureImporter:
       name: Wizard_Idle_59
       rect:
         serializedVersion: 2
-        x: 5600
-        y: 1992
-        width: 800
-        height: 996
+        x: 1400
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1386,10 +1386,10 @@ TextureImporter:
       name: Wizard_Idle_60
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 1992
-        width: 800
-        height: 996
+        x: 1600
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1407,10 +1407,10 @@ TextureImporter:
       name: Wizard_Idle_61
       rect:
         serializedVersion: 2
-        x: 7200
-        y: 1992
-        width: 800
-        height: 996
+        x: 1800
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1428,10 +1428,10 @@ TextureImporter:
       name: Wizard_Idle_62
       rect:
         serializedVersion: 2
-        x: 8000
-        y: 1992
-        width: 800
-        height: 996
+        x: 2000
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1449,10 +1449,10 @@ TextureImporter:
       name: Wizard_Idle_63
       rect:
         serializedVersion: 2
-        x: 8800
-        y: 1992
-        width: 800
-        height: 996
+        x: 2200
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1470,10 +1470,10 @@ TextureImporter:
       name: Wizard_Idle_64
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 1992
-        width: 800
-        height: 996
+        x: 2400
+        y: 498
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1492,9 +1492,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 996
-        width: 800
-        height: 996
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1512,10 +1512,10 @@ TextureImporter:
       name: Wizard_Idle_66
       rect:
         serializedVersion: 2
-        x: 800
-        y: 996
-        width: 800
-        height: 996
+        x: 200
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1533,10 +1533,10 @@ TextureImporter:
       name: Wizard_Idle_67
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 996
-        width: 800
-        height: 996
+        x: 400
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1554,10 +1554,10 @@ TextureImporter:
       name: Wizard_Idle_68
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 996
-        width: 800
-        height: 996
+        x: 600
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1575,10 +1575,10 @@ TextureImporter:
       name: Wizard_Idle_69
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 996
-        width: 800
-        height: 996
+        x: 800
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1596,10 +1596,10 @@ TextureImporter:
       name: Wizard_Idle_70
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 996
-        width: 800
-        height: 996
+        x: 1000
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1617,10 +1617,10 @@ TextureImporter:
       name: Wizard_Idle_71
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 996
-        width: 800
-        height: 996
+        x: 1200
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1638,10 +1638,10 @@ TextureImporter:
       name: Wizard_Idle_72
       rect:
         serializedVersion: 2
-        x: 5600
-        y: 996
-        width: 800
-        height: 996
+        x: 1400
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1659,10 +1659,10 @@ TextureImporter:
       name: Wizard_Idle_73
       rect:
         serializedVersion: 2
-        x: 6400
-        y: 996
-        width: 800
-        height: 996
+        x: 1600
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1680,10 +1680,10 @@ TextureImporter:
       name: Wizard_Idle_74
       rect:
         serializedVersion: 2
-        x: 7200
-        y: 996
-        width: 800
-        height: 996
+        x: 1800
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1701,10 +1701,10 @@ TextureImporter:
       name: Wizard_Idle_75
       rect:
         serializedVersion: 2
-        x: 8000
-        y: 996
-        width: 800
-        height: 996
+        x: 2000
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1722,10 +1722,10 @@ TextureImporter:
       name: Wizard_Idle_76
       rect:
         serializedVersion: 2
-        x: 8800
-        y: 996
-        width: 800
-        height: 996
+        x: 2200
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1743,10 +1743,10 @@ TextureImporter:
       name: Wizard_Idle_77
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 996
-        width: 800
-        height: 996
+        x: 2400
+        y: 249
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1766,8 +1766,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 800
-        height: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1785,10 +1785,10 @@ TextureImporter:
       name: Wizard_Idle_79
       rect:
         serializedVersion: 2
-        x: 800
+        x: 200
         y: 0
-        width: 800
-        height: 996
+        width: 200
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

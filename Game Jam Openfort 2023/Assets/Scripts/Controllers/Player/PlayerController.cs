@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         if (hInput != 0)
         {
             mSpriteRenderer.flipX = (hInput > 0) ? false : true;
-        }
+        } 
     }
 
     private void FixedUpdate()
